@@ -1,25 +1,31 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+
 body {
-  color : #ededed;
+  color: #ededed;
 }
 
 /* --- Home Page --- */
 .home {
   position: relative;
-  height: 100vh; 
-  background: url("anni_gen2 copy.png") no-repeat; 
-  background-position: 130% 23%;
-  background-color: #000000; 
+  min-height: 100vh;
+  background-color: #000000;
+
+  /* ✅ anchored background image */
+  background-image: url("anni_gen2 copy.png");
+  background-repeat: no-repeat;
+  background-position: right 4% center; /* anchored right */
+  background-size: clamp(550px, 48vw, 900px);
+
   display: flex;
   align-items: center;
-  padding: 60px  5% 0;
+  padding: 80px 5% 0;
 }
 
 .header {
@@ -30,172 +36,255 @@ body {
   padding: 20px 5%;
   display: flex;
   justify-content: space-between;
-  background: transparent;
   align-items: center;
+  background: transparent;
   z-index: 100;
 }
+
 .logo {
   color: #ededed;
   font-size: 25px;
   text-decoration: none;
   font-weight: 600;
 }
+
 .navbar a {
   color: #ededed;
   text-decoration: none;
-  transition: .75s; 
+  transition: 0.75s;
   margin-left: 35px;
   font-size: 18px;
   font-weight: 500;
 }
+
 .navbar a:hover,
 .navbar a.active {
   color: #00abf0;
 }
 
-.lines-logo {
-  position: absolute;     
-  bottom: 0px;              
-  left: 0;            
-  width: 50%;           
-  height: auto;          
-  object-fit: contain;      
-  z-index: 0;             
-  opacity: 0.5;
-}
-
-.sfsu-logo {
-  width: 350px;          
-  display: block;
-  margin: -200px 0 25px 0;    
-}
-
-.home-logos {
-  display: flex;
-  flex-direction: column;   
-  margin-bottom: 15px;  
-}
-
-.home-logos img {
-  width: 250px;      
-  height: auto;
-}
-
 .home-content {
-    max-width: 600px;
-    margin-top: 120px;
+  max-width: 600px;
+  margin-top: 40px; /* 👈 moves text lower */
+  position: relative;
+  z-index: 1;
 }
+
 .home-content h1 {
-    font-size: 56px;
-    line-height: 1.2;
-    font-weight: 700;
-    margin: -50px 0 25px 0;
+  font-size: 56px;
+  line-height: 1.2;
+  font-weight: 700;
+  margin: -50px 0 25px 0;
 }
+
 .home-content h3 {
-    font-size: 32px;
-    font-weight: 700;
-    color: #00abf0;
+  font-size: 32px;
+  font-weight: 700;
+  color: #00abf0;
 }
+
 .home-content p {
-    font-size: 16px;
-    margin: 20px 0 40px;
+  font-size: 16px;
+  margin: 20px 0 40px;
 }
+
 .home-content .btn-box {
-    display: flex;
-    justify-content: space-between;
-    width: 345px;
-    height: 50px;
+  display: flex;
+  justify-content: space-between;
+  width: 345px;
+  height: 50px;
 }
+
 .btn-box a {
   position: relative;
   display: inline-flex;
   justify-content: center;
-  align-items: center;    
+  align-items: center;
   width: 150px;
   height: 100%;
-  background: transparent;          
+  background: transparent;
   border: 2px solid #00abf0;
   border-radius: 8px;
   font-size: 19px;
-  color: #00abf0;                   
+  color: #00abf0;
   text-decoration: none;
   font-weight: 600;
   letter-spacing: 1px;
   z-index: 1;
   overflow: hidden;
-  transition: .75s; 
+  transition: 0.75s;
 }
+
 .btn-box a:hover {
-   border-color: #00abf0;
-  background: #00abf0;              
-  color: #081b29;                   
+  border-color: #00abf0;
+  background: #00abf0;
+  color: #081b29;
 }
+
 .btn-box a::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background: #00abf0; 
-    z-index: -1;
-    transition: .75s; 
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #00abf0;
+  z-index: -1;
+  transition: 0.75s;
 }
-.btn-box a:hover::before{
-    width: 100%
+
+.btn-box a:hover::before {
+  width: 100%;
 }
-home-sci{
-    position: absolute;
-    bottom: 40px;
-    width: 170;
-    background: red;
+
+.home-sci {
+  position: absolute;
+  bottom: 40px;
+  width: 170px;
 }
 
 /* --- Contact Page --- */
+/* --- Contact Page (clean, stacked card) --- */
 .contact {
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   background: #081b29;
-  padding: 100px 10%;
+  padding: 120px 5% 100px;
   color: #ededed;
 }
 
 .contact-content {
-  max-width: 700px;
+  width: 100%;
+  max-width: 820px;
   text-align: center;
 }
 
 .contact-content h1 {
-  font-size: 42px;
-  margin-bottom: 20px;
+  font-size: 44px;
+  margin-bottom: 10px;
   color: #00abf0;
 }
 
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  margin-top: 20px;
+.contact-content p { opacity: .95; }
+
+.contact-content form {
+  margin: 28px auto 0;
+  width: 100%;
 }
 
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 12px 15px;
-  border: none;
-  border-radius: 6px;
-  outline: none;
-  font-size: 16px;
+.contact fieldset {
+  border: 1px solid rgba(0,171,240,.25);
+  background: #0b2335;
+  border-radius: 16px;
+  padding: 28px;
+  margin: 0 auto;
+  max-width: 720px;
+  box-shadow: 0 16px 40px rgba(0,0,0,.35);
 }
+
+.contact legend {
+  font-size: 18px;
+  color: #9ad8f6;
+  padding: 0 8px;
+}
+
+/* stack everything nicely */
+.contact form label {
+  display: block;
+  margin: 16px 0 8px;
+  font-weight: 600;
+  text-align: left;
+}
+
+.contact form input,
+.contact form textarea {
+  display: block;               /* important: break the line */
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 10px;
+  border: 1px solid rgba(0,171,240,.35);
+  background: #0e2a3c;
+  color: #ededed;
+  font-size: 16px;
+  outline: none;
+  transition: border-color .2s, box-shadow .2s, background .2s;
+}
+
+/* softer placeholder */
+.contact form input::placeholder,
+.contact form textarea::placeholder { color: #b9d8e7; opacity: .85; }
+
+/* focus ring */
+.contact form input:focus,
+.contact form textarea:focus {
+  border-color: #00abf0;
+  box-shadow: 0 0 0 4px rgba(0,171,240,.18);
+  background: #0b3146;
+}
+
+/* message field */
+.contact form textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+/* submit button (animated) */
+.contact form button {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 22px auto 6px;
+  width: 180px;
+  height: 52px;
+  border: 2px solid #00abf0;
+  border-radius: 10px;
+  background: transparent;
+  color: #00abf0;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: .5px;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 1;
+  transition: color .4s;
+}
+.contact form button:hover { color: #081b29; }
+.contact form button::before {
+  content: "";
+  position: absolute; inset: 0 100% 0 0;
+  background: #00abf0; z-index: -1; transition: inset .4s;
+  border-radius: 8px;
+}
+.contact form button:hover::before { inset: 0; }
+
+/* socials */
+.contact-sci, .about-sci { margin-top: 30px; }
+.contact-sci a, .about-sci a {
+  text-decoration: none;
+  color: #ededed;
+  font-size: 30px;
+  margin: 0 12px;
+  transition: transform .2s, color .2s;
+}
+.contact-sci a:hover, .about-sci a:hover {
+  color: #00abf0; transform: translateY(-3px);
+}
+
+/* responsive */
+@media (max-width: 520px) {
+  .contact fieldset { padding: 22px; }
+  .contact-content h1 { font-size: 36px; }
+}
+
 
 /* Animated Submit Button */
 form button {
   position: relative;
   display: inline-flex;
   justify-content: center;
-  align-items: center;    
+  align-items: center;
   margin-top: 15px;
   padding: 12px 20px;
   border: 2px solid #00abf0;
@@ -210,11 +299,13 @@ form button {
   z-index: 1;
   transition: 0.5s;
 }
+
 form button:hover {
   color: #081b29;
 }
+
 form button::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -224,6 +315,7 @@ form button::before {
   z-index: -1;
   transition: 0.5s;
 }
+
 form button:hover::before {
   width: 100%;
 }
@@ -232,15 +324,16 @@ form button:hover::before {
   margin-top: 30px;
 }
 
-/* ✅ Only underline fix */
+/* ✅ Social icons */
 .contact-sci a,
 .about-sci a {
-  text-decoration: none; 
+  text-decoration: none;
   color: #ededed;
   font-size: 28px;
   margin: 0 10px;
   transition: 0.3s;
 }
+
 .contact-sci a:hover,
 .about-sci a:hover {
   color: #00abf0;
@@ -295,7 +388,7 @@ form button:hover::before {
 
 .section-subtitle {
   text-align: center;
-  opacity: .9;
+  opacity: 0.9;
   margin-bottom: 30px;
 }
 
@@ -307,24 +400,28 @@ form button:hover::before {
 
 .project-card {
   background: #0b2335;
-  border: 1px solid rgba(0,171,240,.25);
+  border: 1px solid rgba(0, 171, 240, 0.25);
   border-radius: 14px;
   padding: 20px;
-  transition: transform .25s, box-shadow .25s;
+  transition: transform 0.25s, box-shadow 0.25s;
 }
+
 .project-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 10px 24px rgba(0,0,0,.35);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
 }
+
 .project-card h3 {
   color: #ededed;
   margin-bottom: 6px;
 }
+
 .project-card p {
   font-size: 14px;
   opacity: 0.85;
   margin-bottom: 12px;
 }
+
 .project-card a {
   display: inline-block;
   margin-top: 6px;
@@ -333,62 +430,13 @@ form button:hover::before {
   padding: 8px 14px;
   border-radius: 8px;
   text-decoration: none;
-  transition: .3s;
+  transition: 0.3s;
 }
+
 .project-card a:hover {
   background: #00abf0;
   color: #081b29;
 }
-
-
-/* Contact form: make it look like the old stacked version */
-
-/* Hide the default fieldset box + legend line */
-.contact fieldset {
-  border: none;
-  padding: 0;
-  margin: 0 auto;
-  max-width: 720px;   /* centers & limits width like before */
-}
-.contact legend {
-  display: none;
-}
-
-/* Stack label above input, with spacing */
-.contact form label {
-  display: block;
-  margin: 16px 0 6px;
-  font-weight: 700;
-  text-align: left;   /* labels left-aligned like before */
-}
-
-/* Full-width inputs on their own line */
-.contact form input,
-.contact form textarea {
-  display: block;           /* forces a new line */
-  width: 100%;
-  padding: 12px 15px;
-  border: 1px solid #00abf0;
-  border-radius: 10px;
-  background: #ffffff;      /* white fields like before */
-  color: #081b29;
-  box-sizing: border-box;
-}
-
-/* If you use a textarea for Message */
-.contact form textarea {
-  min-height: 120px;
-  resize: vertical;
-}
-
-/* Center the submit button & keep your animation */
-.contact form button {
-  display: inline-flex;
-  margin: 18px auto 0;  /* centers it */
-  width: 160px;         /* tidy size (optional) */
-  height: 50px;
-}
-
 
 /* === Skills Page (Auto-scroll) === */
 .skills {
@@ -398,7 +446,11 @@ form button:hover::before {
   padding: 120px 5% 80px;
 }
 
-.skills-container { max-width: 1200px; margin: 0 auto; overflow: hidden; }
+.skills-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
 
 .section-title {
   font-size: 42px;
@@ -417,14 +469,15 @@ form button:hover::before {
 
 /* Group cards */
 .skills-group {
-  background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(0,171,240,0.22);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(0, 171, 240, 0.22);
   border-radius: 14px;
   padding: 24px 10px;
   margin: 30px 0;
   overflow: hidden;
   position: relative;
 }
+
 .skills-group-header {
   display: flex;
   align-items: center;
@@ -432,11 +485,23 @@ form button:hover::before {
   margin-bottom: 20px;
   padding-left: 20px;
 }
-.skills-group-header i { font-size: 26px; color: #00abf0; }
-.skills-group-header h2 { font-size: 24px; margin: 0; }
 
-/* Scrolling lanes */
-.scroll-wrapper { overflow: hidden; white-space: nowrap; position: relative; }
+.skills-group-header i {
+  font-size: 26px;
+  color: #00abf0;
+}
+
+.skills-group-header h2 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.scroll-wrapper {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+
 .scroll-strip,
 .scroll-strip.slow {
   display: flex;
@@ -446,14 +511,19 @@ form button:hover::before {
   will-change: transform;
 }
 
-.scroll-strip.slow { animation-duration: 35s; }
-
-@keyframes scroll-left {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-50%); }
+.scroll-strip.slow {
+  animation-duration: 35s;
 }
 
-/* Icon cards */
+@keyframes scroll-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
 .icon-card {
   display: inline-flex;
   flex-direction: column;
@@ -472,49 +542,83 @@ form button:hover::before {
   border: 2px solid #00abf0;
   display: grid;
   place-items: center;
-  background: rgba(0,171,240,0.06);
-  transition: transform .25s, background .25s, color .25s, box-shadow .25s, filter .25s;
+  background: rgba(0, 171, 240, 0.06);
+  transition: transform 0.25s, background 0.25s, color 0.25s, box-shadow 0.25s,
+    filter 0.25s;
 }
 
-/* Font icons */
-.icon-card i { font-size: 48px; color: #00abf0; }
+.icon-card i {
+  font-size: 48px;
+  color: #00abf0;
+}
 
-/* Image logos default: blue-tinted (for single-color/source-less logos) */
 .icon-card img.skill-icon {
   padding: 18px;
   box-sizing: border-box;
   object-fit: contain;
   filter: brightness(0) saturate(100%) invert(52%) sepia(89%)
-          saturate(1795%) hue-rotate(171deg) brightness(96%) contrast(93%);
+    saturate(1795%) hue-rotate(171deg) brightness(96%) contrast(93%);
 }
 
-/* Preserve original brand colors for these multi-color / branded SVGs */
-.icon-card img.skill-icon.logo-color { filter: none; }
+.icon-card img.skill-icon.logo-color {
+  filter: none;
+}
 
-/* Some wide wordmarks (like n8n) benefit from a little less padding */
-.icon-card img.skill-icon.wide { padding: 14px; }
+.icon-card img.skill-icon.wide {
+  padding: 14px;
+}
 
-/* Hover effects */
 .icon-card:hover i,
 .icon-card:hover img.skill-icon {
   background: #00abf0;
   transform: translateY(-3px);
-  box-shadow: 0 8px 24px rgba(0,171,240,.25);
+  box-shadow: 0 8px 24px rgba(0, 171, 240, 0.25);
 }
 
-/* Contrast on hover */
-.icon-card:hover i { color: #081b29; }
-/* Keep brand-colored logos unchanged on hover */
-.icon-card:hover img.skill-icon.logo-color { filter: none; }
+.icon-card:hover i {
+  color: #081b29;
+}
 
-.icon-card span { font-size: 14px; color: #ededed; }
+.icon-card:hover img.skill-icon.logo-color {
+  filter: none;
+}
+
+.icon-card span {
+  font-size: 14px;
+  color: #ededed;
+}
 
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
-  .scroll-strip { animation: none; transform: none; }
+  .scroll-strip {
+    animation: none;
+    transform: none;
+  }
 }
-/* Normalize marquee pixel-speed across lanes (CSS-only) */
-.skills-group:nth-of-type(1) .scroll-strip { animation-duration: 25s; } /* Frontend (baseline) */
-.skills-group:nth-of-type(2) .scroll-strip { animation-duration: 46s; } /* Backend: more items → longer track */
-.skills-group:nth-of-type(3) .scroll-strip { animation-duration: 29s; } /* AI Tools */
-.skills-group:nth-of-type(4) .scroll-strip { animation-duration: 33s; } /* Management Tools */
+
+/* Normalize marquee pixel-speed */
+.skills-group:nth-of-type(1) .scroll-strip {
+  animation-duration: 25s;
+}
+.skills-group:nth-of-type(2) .scroll-strip {
+  animation-duration: 46s;
+}
+.skills-group:nth-of-type(3) .scroll-strip {
+  animation-duration: 29s;
+}
+.skills-group:nth-of-type(4) .scroll-strip {
+  animation-duration: 33s;
+}
+
+/* --- Responsive tweak for small screens --- */
+@media (max-width: 900px) {
+  .home {
+    background-position: center 78%;
+    background-size: 95vw;
+    padding: 110px 6% 360px;
+  }
+
+  .home-content {
+    margin-top: 60px;
+  }
+}
