@@ -5,6 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio - Aniruddha</title>
   <link rel="stylesheet" href="style.css">
+
+  <!-- Force all project summaries to exactly 5 lines -->
+  <style>
+    :root { --card-line-height: 1.45; } /* keep in sync with your text look */
+    .projects-grid { align-items: stretch; }
+    .project-card { display: flex; flex-direction: column; }
+    .project-card p{
+      line-height: var(--card-line-height);
+      display: -webkit-box;                /* clamp multi-line */
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 5;               /* show 5 lines max */
+      overflow: hidden;                    /* hide overflow text */
+      /* Fix the block height so even short blurbs occupy 5 lines */
+      min-height: calc(5 * 1em * var(--card-line-height));
+      max-height: calc(5 * 1em * var(--card-line-height));
+      margin-bottom: 12px;
+    }
+    .project-card .actions { margin-top: auto; } /* keep button at bottom */
+  </style>
 </head>
 <body>
   <!-- Header -->
@@ -12,10 +31,10 @@
     <a href="index.html" class="logo">Aniruddha Madhusudan Dhir</a>
     <nav class="navbar">
       <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a class="active" href="portfolio.html">Portfolio</a>
-      <a href="contact.html">Contact</a>
+      <a href="About.html">About</a>
+      <a href="Services.html">Services</a>
+      <a class="active" href="Portfolio.html">Portfolio</a>
+      <a href="Contact.html">Contact</a>
     </nav>
   </header>
 
@@ -25,13 +44,14 @@
       <h1 class="section-title">Projects</h1>
 
       <div class="projects-grid">
-        
+
         <!-- NEW PROJECT -->
         <article class="project-card">
-          <h3>LearnFlow: Fullstack Learning Management System</h3>
+          <h3>LearnFlow — LMS (Django REST + Next.js)</h3>
           <p>
-             Web app that lets instructors create and manage courses while students
-    browse, enroll, and track learning progress with JWT-secured APIs.
+            Web app that lets instructors create and manage courses while students browse,
+            enroll, and track learning progress. Built with Django REST Framework, Next.js,
+            and JWT-secured APIs; includes auto-generated docs and a clean, responsive UI.
           </p>
           <div class="actions">
             <a class="btn outline" href="https://github.com/Aniruddha-M-Dhir/learnflow" target="_blank" rel="noreferrer">View Code</a>
@@ -41,7 +61,11 @@
         <!-- 1 -->
         <article class="project-card">
           <h3>Mistral OCR Invoice AI Agent</h3>
-          <p>AI agent that extracts structured fields (vendor, date, totals) from invoice PDFs using Mistral OCR.</p>
+          <p>
+            AI agent that extracts structured fields (vendor, date, and totals) from invoice
+            PDFs using Mistral OCR. Produces clean JSON outputs, handles noisy scans, and
+            supports batch processing to accelerate back-office reconciliation workflows.
+          </p>
           <div class="actions">
             <a class="btn outline" href="https://github.com/Aniruddha-M-Dhir/mistral-ocr-invoice-ai-agent" target="_blank" rel="noreferrer">View Code</a>
           </div>
@@ -50,7 +74,11 @@
         <!-- 2 -->
         <article class="project-card">
           <h3>LinkedIn Post Generator AI Agent</h3>
-          <p>Generates polished LinkedIn posts from prompts/links, tailored to tone and audience.</p>
+          <p>
+            Generates polished LinkedIn posts from prompts, links, or notes. Controls tone,
+            length, and audience; rewrites for clarity; and surfaces suggested hooks,
+            hashtags, and CTAs so content feels authentic while performing consistently.
+          </p>
           <div class="actions">
             <a class="btn outline" href="https://github.com/Aniruddha-M-Dhir/Linkedin-post-generator-ai-agent" target="_blank" rel="noreferrer">View Code</a>
           </div>
@@ -59,7 +87,11 @@
         <!-- 3 -->
         <article class="project-card">
           <h3>Viral Content Creator AI Agent</h3>
-          <p>Creates catchy, platform-ready content ideas and copy optimized for engagement.</p>
+          <p>
+            Ideates catchy, platform-ready content with headline, caption, and body copy
+            tuned for engagement. Optimizes for platform constraints and trends while
+            respecting brand voice, and outputs ready-to-post drafts with variants.
+          </p>
           <div class="actions">
             <a class="btn outline" href="https://github.com/Aniruddha-M-Dhir/viral-content-creator-ai-agent" target="_blank" rel="noreferrer">View Code</a>
           </div>
@@ -68,7 +100,11 @@
         <!-- 4 -->
         <article class="project-card">
           <h3>Student Internship Recruiting Agent</h3>
-          <p>Matches students to internships and automates outreach + tracking.</p>
+          <p>
+            Matches students to internships using skills and interests, automates outreach,
+            and tracks responses in a unified pipeline. Provides deduped leads, email
+            templates, and status updates to streamline search and follow-up cycles.
+          </p>
           <div class="actions">
             <a class="btn outline" href="https://github.com/Aniruddha-M-Dhir/student-internship-recruiting-agent-" target="_blank" rel="noreferrer">View Code</a>
           </div>
@@ -77,7 +113,11 @@
         <!-- 5 -->
         <article class="project-card">
           <h3>Numeric Computer Vision</h3>
-          <p>Computer-vision experiments focused on numerical feature extraction and analysis.</p>
+          <p>
+            Experiments in extracting numerical features from images for downstream
+            analytics. Includes pre-processing, segmentation, and feature engineering
+            pipelines to support measurement, recognition, and quality inspection tasks.
+          </p>
           <div class="actions">
             <a class="btn outline" href="https://github.com/Aniruddha-M-Dhir/Numeric-Computer-Vision" target="_blank" rel="noreferrer">View Code</a>
           </div>
@@ -86,7 +126,11 @@
         <!-- 6 -->
         <article class="project-card">
           <h3>Drug Trial Analysis</h3>
-          <p>Analyzes clinical trial datasets and summarizes efficacy/safety metrics.</p>
+          <p>
+            Analyzes clinical trial datasets to summarize efficacy and safety metrics.
+            Provides cohort filters, endpoint comparisons, and visual summaries that help
+            reviewers interpret response rates, adverse events, and confidence intervals.
+          </p>
           <div class="actions">
             <a class="btn outline" href="https://github.com/Aniruddha-M-Dhir/drug-trial-analysis" target="_blank" rel="noreferrer">View Code</a>
           </div>
@@ -95,7 +139,11 @@
         <!-- 7 -->
         <article class="project-card">
           <h3>Google Guava</h3>
-          <p>Exercises exploring Google Guava utilities and data-structure patterns.</p>
+          <p>
+            Hands-on exercises with Google Guava collections, caching, and utilities.
+            Demonstrates immutable structures, preconditions, ranges, and fluent APIs
+            that simplify Java codebases and improve performance and correctness.
+          </p>
           <div class="actions">
             <a class="btn outline" href="https://github.com/Aniruddha-M-Dhir/Google-Guava" target="_blank" rel="noreferrer">View Code</a>
           </div>
@@ -104,7 +152,11 @@
         <!-- 8 -->
         <article class="project-card">
           <h3>Data Structures: Queues & Linked Lists</h3>
-          <p>Implementations and practice problems with queues and linked lists.</p>
+          <p>
+            Implementations and practice problems for queues and linked lists, covering
+            common operations, complexity, and edge cases. Includes tests and annotated
+            walkthroughs to build intuition for interviews and foundational courses.
+          </p>
           <div class="actions">
             <a class="btn outline" href="https://github.com/Aniruddha-M-Dhir/Data-Structures-Queues-and-linked-list" target="_blank" rel="noreferrer">View Code</a>
           </div>
@@ -113,7 +165,11 @@
         <!-- 9 -->
         <article class="project-card">
           <h3>Data Structures</h3>
-          <p>Core data-structure implementations and notes for study and review.</p>
+          <p>
+            Core data-structure implementations and notes for study and review, including
+            arrays, stacks, queues, trees, and graphs. Emphasizes clarity, tests, and
+            tradeoffs to help compare alternatives and choose the right tool quickly.
+          </p>
           <div class="actions">
             <a class="btn outline" href="https://github.com/Aniruddha-M-Dhir/Data-Structures-" target="_blank" rel="noreferrer">View Code</a>
           </div>
@@ -122,7 +178,11 @@
         <!-- 10 -->
         <article class="project-card">
           <h3>OOP: Classes & Inheritance</h3>
-          <p>Object-oriented programming exercises focusing on classes and inheritance.</p>
+          <p>
+            Object-oriented programming exercises focusing on classes, inheritance, and
+            composition. Uses small challenges to illustrate encapsulation, polymorphism,
+            and design tradeoffs that keep code flexible, readable, and testable.
+          </p>
           <div class="actions">
             <a class="btn outline" href="https://github.com/Aniruddha-M-Dhir/OOP_Classes_Inheritence" target="_blank" rel="noreferrer">View Code</a>
           </div>
@@ -131,7 +191,11 @@
         <!-- 11 -->
         <article class="project-card">
           <h3>Arrays and OOP</h3>
-          <p>Combines array manipulation with object-oriented patterns and design.</p>
+          <p>
+            Combines array manipulation with object-oriented patterns and design. Covers
+            iteration, searching, and transformation while introducing small reusable
+            classes and methods that make code robust and easier to maintain.
+          </p>
           <div class="actions">
             <a class="btn outline" href="https://github.com/Aniruddha-M-Dhir/Arrays-and-OOP" target="_blank" rel="noreferrer">View Code</a>
           </div>
@@ -140,7 +204,11 @@
         <!-- 12 -->
         <article class="project-card">
           <h3>BMI Calculator</h3>
-          <p>Simple BMI calculator with input handling and category output.</p>
+          <p>
+            Simple BMI calculator with input validation and category output. Demonstrates
+            UI flow, numeric handling, and edge cases while keeping the codebase clean,
+            approachable, and ready for feature extensions or styling tweaks.
+          </p>
           <div class="actions">
             <a class="btn outline" href="https://github.com/Aniruddha-M-Dhir/BMI-Calculator" target="_blank" rel="noreferrer">View Code</a>
           </div>
@@ -149,7 +217,11 @@
         <!-- 13 -->
         <article class="project-card">
           <h3>Restaurant Check Manager</h3>
-          <p>Calculates restaurant bills, tips, and splits for groups.</p>
+          <p>
+            Calculates restaurant bills, tips, taxes, and group splits. Focuses on clear
+            user inputs, currency formatting, and predictable rounding so totals are
+            transparent and sharing costs with friends stays quick and drama-free.
+          </p>
           <div class="actions">
             <a class="btn outline" href="https://github.com/Aniruddha-M-Dhir/RestaurantCheckManager" target="_blank" rel="noreferrer">View Code</a>
           </div>
@@ -158,7 +230,11 @@
         <!-- 14 -->
         <article class="project-card">
           <h3>Credit Card Validator</h3>
-          <p>Validates card numbers (e.g., Luhn check) and formats inputs.</p>
+          <p>
+            Validates card numbers using the Luhn algorithm and formats inputs for UX.
+            Provides clear error states and helper text so users fix issues fast,
+            improving reliability in checkout flows and form-heavy applications.
+          </p>
           <div class="actions">
             <a class="btn outline" href="https://github.com/Aniruddha-M-Dhir/Credit-Card-Validator" target="_blank" rel="noreferrer">View Code</a>
           </div>
@@ -167,7 +243,11 @@
         <!-- 15 -->
         <article class="project-card">
           <h3>Tic Tac Toe</h3>
-          <p>Classic Tic-Tac-Toe game with two-player or basic AI mode.</p>
+          <p>
+            Classic Tic-Tac-Toe with two-player and basic AI. Demonstrates state handling,
+            win detection, and draw logic, while keeping the UI responsive and the code
+            modular so variants like larger boards are easy to prototype later.
+          </p>
           <div class="actions">
             <a class="btn outline" href="https://github.com/Aniruddha-M-Dhir/TicTacToe" target="_blank" rel="noreferrer">View Code</a>
           </div>
