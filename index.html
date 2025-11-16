@@ -15,6 +15,8 @@
     <header class = "header">
         <a href="#" class = "logo">Aniruddha Madhusudan Dhir</a>
         
+        <i class='bx bx-menu' id="menu-icon"></i> 
+
         <nav class = "navbar">
             <a href="index.html" class ="active">Home </a>
             <a href="about.html">About</a>
@@ -73,11 +75,17 @@
   
 </section>
 
+<script>
+    const menuIcon = document.getElementById('menu-icon');
+    const navbar = document.querySelector('.navbar');
 
-
-
-
-
+    menuIcon.onclick = () => {
+        navbar.classList.toggle('active');
+        // Toggle the icon change for better UX
+        menuIcon.classList.toggle('bx-menu');
+        menuIcon.classList.toggle('bx-x');
+    };
+  </script>
 
        
   
@@ -85,4 +93,4 @@
    
 
     
-</html>
+  </html>

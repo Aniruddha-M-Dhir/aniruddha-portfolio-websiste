@@ -48,6 +48,7 @@ body {
   font-weight: 600;
 }
 
+/* --- NAVBAR (Desktop) --- */
 .navbar a {
   color: #ededed;
   text-decoration: none;
@@ -61,6 +62,15 @@ body {
 .navbar a.active {
   color: #00abf0;
 }
+
+/* --- MOBILE MENU ICON --- */
+#menu-icon {
+  font-size: 36px;
+  color: #ededed;
+  cursor: pointer;
+  display: none; /* Hidden on desktop */
+}
+
 
 .home-content {
   max-width: 600px;
@@ -612,6 +622,61 @@ form button:hover::before {
 
 /* --- Responsive tweak for small screens --- */
 @media (max-width: 900px) {
+  /* HOME SECTION: Stack content and image */
+  .home {
+    /* Adjust padding to make room for content stack */
+    padding: 110px 6% 360px; 
+    /* Move image to bottom-center of the screen */
+    background-position: center 78%; 
+    background-size: 95vw;
+  }
+
+  .home-content {
+    margin-top: 60px;
+    max-width: 100%; /* Use full width on mobile */
+    text-align: center;
+  }
+  .home-content .btn-box {
+    width: 100%;
+    justify-content: center;
+    gap: 15px; /* Add space between buttons */
+  }
+
+  /* HEADER & NAV: Show hamburger icon, hide desktop links */
+  .header {
+    background: #081b29; /* Give header a background on mobile */
+  }
+  #menu-icon {
+    display: block; /* Show menu icon */
+  }
+  .navbar {
+    position: absolute;
+    top: 100%; /* Position below header */
+    left: 0;
+    width: 100%;
+    padding: 1rem 3%;
+    background: #081b29;
+    border-top: 1px solid rgba(0, 171, 240, 0.2);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.2);
+    display: none; /* Hide by default */
+    transition: 0.25s;
+    text-align: left;
+  }
+
+  /* Show menu when active class is applied by JS */
+  .navbar.active {
+    display: block; 
+  }
+
+  .navbar a {
+    display: block;
+    font-size: 20px;
+    margin: 1.5rem 0;
+  }
+}
+/* Existing media query for home section (renamed, now included above) */
+/*
+@media (max-width: 900px) {
   .home {
     background-position: center 78%;
     background-size: 95vw;
@@ -622,3 +687,4 @@ form button:hover::before {
     margin-top: 60px;
   }
 }
+*/

@@ -11,6 +11,9 @@
   
   <header class="header">
     <a href="index.html" class="logo">Aniruddha Madhusudan Dhir</a>
+
+    <i class='bx bx-menu' id="menu-icon"></i> 
+
     <nav class="navbar">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
@@ -47,7 +50,6 @@
     <label for="Message">Message:</label>
     <input type="text" name="Message" required placeholder="Message"/>
 
-    <!-- ✅ Submit Button -->
     <button type="submit">Submit</button>
   </fieldset>
 </form>
@@ -68,41 +70,17 @@
                     
 
 
-<!--
+<script>
+    const menuIcon = document.getElementById('menu-icon');
+    const navbar = document.querySelector('.navbar');
 
-          
-        </fieldset>
-        <fieldset>
-          <legend>Payment Information</legend>
-          <label for="cc-number">Credit Card Number:</label>
-          <input type="text" id="cc-number" name="cc-number" required placeholder="1234 5678 9012 3456" />
-        <label for="cc-expiration">Expiration Date:</label>
-          <input type="text" id="cc-expiration" name="cc-expiration" required placeholder="MM/YY" />
+    menuIcon.onclick = () => {
+        navbar.classList.toggle('active');
+        // Toggle the icon change for better UX
+        menuIcon.classList.toggle('bx-menu');
+        menuIcon.classList.toggle('bx-x');
+    };
+</script>
 
-          <label for="cc-cvv">CVV:</label>
-          <input type="text" id="cc-cvv" name="cc-cvv" required>
-          <label for="amount">Amount (USD):</label>
-          <input type="text" id="amount" name="amount" required placeholder="Amount"/>
-
-          <button type="submit">Submit Payment</button>
-        </fieldset>
-      </form>
-
-     
-
-      
-        <div class="about-sci">
-  <a href="https://www.linkedin.com/in/aniruddha-dhir" target="_blank" rel="noopener noreferrer">
-    <i class='bx bxl-linkedin'></i>
-  </a>
-  <a href="https://github.com/Aniruddha-M-Dhir?tab=repositories" target="_blank" rel="noopener noreferrer">
-    <i class='bx bxl-github'></i>
-  </a>
-  <a href="https://www.instagram.com/anni__dhir" target="_blank" rel="noopener noreferrer">
-    <i class='bx bxl-instagram'></i>
-  </a>
-</div>
-    </div>
-  </section>
 </body>
 </html>
