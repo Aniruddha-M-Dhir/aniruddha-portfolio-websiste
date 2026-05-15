@@ -8,7 +8,7 @@
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
   <style>
-    :root { --card-line-height: 1.45; } 
+    :root { --card-line-height: 1.45; } /* keep in sync with your text look */
     .projects-grid { align-items: stretch; }
     .project-card { display: flex; flex-direction: column; }
     .project-card p{
@@ -22,7 +22,16 @@
       max-height: calc(5 * 1em * var(--card-line-height));
       margin-bottom: 12px;
     }
-    .project-card .actions { margin-top: auto; } /* keep button at bottom */
+    .project-card .actions { 
+      margin-top: auto;
+      pointer-events: auto !important;
+      z-index: 10 !important;
+      position: relative;
+    }
+    .project-card .actions a {
+      pointer-events: auto !important;
+      cursor: pointer !important;
+    }
   </style>
 </head>
 <body>
