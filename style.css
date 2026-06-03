@@ -37,7 +37,11 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: transparent;
+  /* Glassmorphism background so scrolling text doesn't collide */
+  background: rgba(8, 27, 41, 0.85); 
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0, 171, 240, 0.15);
   z-index: 100;
 }
 
