@@ -45,6 +45,14 @@ body {
   z-index: 100;
 }
 
+/* Modifier class for the Home page to blend seamlessly with the background image */
+.header.header-transparent {
+  background: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border-bottom: none;
+}
+
 .logo {
   color: #ededed;
   font-size: 25px;
