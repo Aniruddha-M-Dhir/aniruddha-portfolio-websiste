@@ -1,45 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Projects by Aniruddha Madhusudan Dhir — AI agents, LMS platforms, computer vision, data tools, and more.">
+  <meta name="description"
+    content="Projects by Aniruddha Madhusudan Dhir — AI agents, LMS platforms, computer vision, data tools, and more.">
   <title>Portfolio - Aniruddha Madhusudan Dhir</title>
   <link rel="stylesheet" href="style.css">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
   <style>
-    :root { --card-line-height: 1.45; } /* keep in sync with your text look */
-    .projects-grid { align-items: stretch; }
-    .project-card { display: flex; flex-direction: column; }
-    .project-card p{
+    :root {
+      --card-line-height: 1.45;
+    }
+
+    /* keep in sync with your text look */
+    .projects-grid {
+      align-items: stretch;
+    }
+
+    .project-card {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .project-card p {
       line-height: var(--card-line-height);
-      display: -webkit-box;                /* clamp multi-line */
+      display: -webkit-box;
+      /* clamp multi-line */
       -webkit-box-orient: vertical;
-      -webkit-line-clamp: 5;               /* show 5 lines max */
-      overflow: hidden;                    /* hide overflow text */
+      -webkit-line-clamp: 5;
+      /* show 5 lines max */
+      overflow: hidden;
+      /* hide overflow text */
       /* Fix the block height so even short blurbs occupy 5 lines */
       min-height: calc(5 * 1em * var(--card-line-height));
       max-height: calc(5 * 1em * var(--card-line-height));
       margin-bottom: 12px;
     }
-    .project-card .actions { 
+
+    .project-card .actions {
       margin-top: auto;
       pointer-events: auto !important;
       z-index: 10 !important;
       position: relative;
     }
+
     .project-card .actions a {
       pointer-events: auto !important;
       cursor: pointer !important;
     }
   </style>
 </head>
+
 <body>
   <header class="header">
     <a href="index.html" class="logo">Aniruddha Madhusudan Dhir</a>
-    
-    <i class='bx bx-menu' id="menu-icon"></i> 
+
+    <i class='bx bx-menu' id="menu-icon"></i>
 
     <nav class="navbar">
       <a href="index.html">Home</a>
@@ -59,220 +78,211 @@
         <article class="project-card">
           <h3>LearnFlow: Fullstack Learning Management System</h3>
           <p>
-            Web app that lets instructors create and manage courses while students browse,
-            enroll, and track learning progress. Built with Django REST Framework, Next.js,
-            and JWT-secured APIs; includes auto-generated docs and a clean, responsive UI.
+            Full-stack LMS built with Next.js, MySQL, and Prisma. This platform lets instructors manage courses while
+            students enroll and track their learning progress.
           </p>
           <div class="actions">
-            <a class="btn outline" href="https://lmslearnflow.netlify.app" target="_blank" rel="noreferrer"><i class='bx bx-link-external'></i> Live Site</a>
+            <a class="btn outline" href="https://lmslearnflow.netlify.app" target="_blank" rel="noreferrer"><i
+                class='bx bx-link-external'></i> Live Site</a>
           </div>
         </article>
-        
+
         <article class="project-card">
           <h3>Housing Price Analysis: Deal or No Deal</h3>
           <p>
-            A computational geometry project that uses Venn diagrams and set theory 
-            classification to determine if a house's price is competitive (a "Deal").
-            Compares user-input house prices against the calculated average price of 
-            its categorized group, defined by square footage, room count, and parking.
-            Built in Python using matplotlib and set analysis for robust categorization.
+            Python tool built with Matplotlib and Set Theory. It classifies house prices by square footage, rooms, and
+            parking to discover competitive deals.
           </p>
           <div class="actions">
-            <a class="btn outline" href="https://github.com/Aniruddha-M-Dhir/Housing-Predictor" target="_blank" rel="noreferrer">View Code</a>
+            <a class="btn outline" href="https://github.com/Aniruddha-M-Dhir/Housing-Predictor" target="_blank"
+              rel="noreferrer">View Code</a>
           </div>
         </article>
 
         <article class="project-card">
           <h3>Retro Arcade: Pacman V2</h3>
           <p>
-            A faithful recreation of the classic Pacman arcade game built using vanilla HTML, 
-            CSS, and JavaScript. Demonstrates object-oriented game loops, keyboard input 
-            handling, sprite animation, and collision detection on a grid-based map. 
-            Includes four ghost AI patterns (Blinky, Pinky, Inky, Clyde) for engaging 
-            gameplay and robust state management.
+            Arcade recreation built with HTML, CSS, and Vanilla JS. Features object-oriented game loops, sprite
+            animation, collision detection, and four ghost AI patterns.
           </p>
           <div class="actions">
-            <a class="btn outline" href="https://github.com/Aniruddha-M-Dhir/pacman" target="_blank" rel="noreferrer">View Code</a>
+            <a class="btn outline" href="https://github.com/Aniruddha-M-Dhir/pacman" target="_blank"
+              rel="noreferrer">View Code</a>
           </div>
         </article>
-        
+
         <article class="project-card">
-          <h3>Mistral OCR Invoice AI Agent</h3>
+          <h3>DocuMind</h3>
           <p>
-            AI agent that extracts structured fields (vendor, date, and totals) from invoice
-            PDFs using Mistral OCR. Produces clean JSON outputs, handles noisy scans, and
-            supports batch processing to accelerate back-office reconciliation workflows.
+            AI agent built with Mistral OCR and Python. It extracts structured fields from invoice PDFs and handles
+            noisy scans for back-office reconciliation.
           </p>
           <div class="actions">
-            <a class="btn outline" href="https://github.com/Aniruddha-M-Dhir/mistral-ocr-invoice-ai-agent" target="_blank" rel="noreferrer">View Code</a>
+            <a class="btn outline" href="https://www.loom.com/share/64c759ba62884eb6a2b97802e56a3f2a" target="_blank"
+              rel="noreferrer">View Demo</a>
           </div>
         </article>
 
         <article class="project-card">
           <h3>LinkedIn Post Generator AI Agent</h3>
           <p>
-            Generates polished LinkedIn posts from prompts, links, or notes. Controls tone,
-            length, and audience; rewrites for clarity; and surfaces suggested hooks,
-            hashtags, and CTAs so content feels authentic while performing consistently.
+            AI tool built using LLM APIs and Prompt Engineering. Generates polished LinkedIn posts from raw notes while
+            controlling tone, hashtags, and hooks.
           </p>
           <div class="actions">
-            <a class="btn outline" href="https://github.com/Aniruddha-M-Dhir/Linkedin-post-generator-ai-agent" target="_blank" rel="noreferrer">View Code</a>
+            <a class="btn outline" href="https://github.com/Aniruddha-M-Dhir/Linkedin-post-generator-ai-agent"
+              target="_blank" rel="noreferrer">View Code</a>
           </div>
         </article>
 
         <article class="project-card">
           <h3>Viral Content Creator AI Agent</h3>
           <p>
-            Ideates catchy, platform-ready content with headline, caption, and body copy
-            tuned for engagement. Optimizes for platform constraints and trends while
-            respecting brand voice, and outputs ready-to-post drafts with variants.
+            AI agent built with Python and APIs. It generates catchy, platform-ready content optimized for engagement.
           </p>
           <div class="actions">
-            <a class="btn outline" href="https://github.com/Aniruddha-M-Dhir/viral-content-creator-ai-agent" target="_blank" rel="noreferrer">View Code</a>
+            <a class="btn outline" href="https://github.com/Aniruddha-M-Dhir/viral-content-creator-ai-agent"
+              target="_blank" rel="noreferrer">View Code</a>
           </div>
         </article>
 
         <article class="project-card">
           <h3>Student Internship Recruiting Agent</h3>
           <p>
-            Matches students to internships using skills and interests, automates outreach,
-            and tracks responses in a unified pipeline. Provides deduped leads, email
-            templates, and status updates to streamline search and follow-up cycles.
+            Recruiting agent built with Python and APIs. It matches students to internships, automates email outreach,
+            and tracks responses in a unified pipeline.
           </p>
           <div class="actions">
-            <a class="btn outline" href="https://github.com/Aniruddha-M-Dhir/student-internship-recruiting-agent-" target="_blank" rel="noreferrer">View Code</a>
+            <a class="btn outline" href="https://github.com/Aniruddha-M-Dhir/student-internship-recruiting-agent-"
+              target="_blank" rel="noreferrer">View Code</a>
           </div>
         </article>
 
         <article class="project-card">
           <h3>Numeric Computer Vision</h3>
           <p>
-            Experiments in extracting numerical features from images for downstream
-            analytics. Includes pre-processing, segmentation, and feature engineering
-            pipelines to support measurement, recognition, and quality inspection tasks.
+            Computer vision script built with Python and OpenCV. It extracts numerical features from images to support
+            measurement, recognition, and quality inspection tasks.
           </p>
           <div class="actions">
-            <a class="btn outline" href="https://github.com/Aniruddha-M-Dhir/Numeric-Computer-Vision" target="_blank" rel="noreferrer">View Code</a>
+            <a class="btn outline" href="https://github.com/Aniruddha-M-Dhir/Numeric-Computer-Vision" target="_blank"
+              rel="noreferrer">View Code</a>
           </div>
         </article>
 
         <article class="project-card">
           <h3>Drug Trial Analysis</h3>
           <p>
-            Analyzes clinical trial datasets to summarize efficacy and safety metrics.
-            Provides cohort filters, endpoint comparisons, and visual summaries that help
-            reviewers interpret response rates, adverse events, and confidence intervals.
+            Data analysis tool built with Python and Pandas. It analyzes clinical trial datasets to summarize safety
+            metrics, efficacy rates, and confidence intervals.
           </p>
           <div class="actions">
-            <a class="btn outline" href="https://github.com/Aniruddha-M-Dhir/drug-trial-analysis" target="_blank" rel="noreferrer">View Code</a>
+            <a class="btn outline" href="https://github.com/Aniruddha-M-Dhir/drug-trial-analysis" target="_blank"
+              rel="noreferrer">View Code</a>
           </div>
         </article>
 
         <article class="project-card">
           <h3>Google Guava</h3>
           <p>
-            Hands-on exercises with Google Guava collections, caching, and utilities.
-            Demonstrates immutable structures, preconditions, ranges, and fluent APIs
-            that simplify Java codebases and improve performance and correctness.
+            Java exercises built with Guava. Demonstrates immutable structures, caching, preconditions, and fluent APIs.
           </p>
           <div class="actions">
-            <a class="btn outline" href="https://github.com/Aniruddha-M-Dhir/Google-Guava" target="_blank" rel="noreferrer">View Code</a>
+            <a class="btn outline" href="https://github.com/Aniruddha-M-Dhir/Google-Guava" target="_blank"
+              rel="noreferrer">View Code</a>
           </div>
         </article>
 
         <article class="project-card">
           <h3>Data Structures: Queues & Linked Lists</h3>
           <p>
-            Implementations and practice problems for queues and linked lists, covering
-            common operations, complexity, and edge cases. Includes tests and annotated
-            walkthroughs to build intuition for interviews and foundational courses.
+            Java data structures covering queues, linked lists, operations, and edge cases for technical interviews.
           </p>
           <div class="actions">
-            <a class="btn outline" href="https://github.com/Aniruddha-M-Dhir/Data-Structures-Queues-and-linked-list" target="_blank" rel="noreferrer">View Code</a>
+            <a class="btn outline" href="https://github.com/Aniruddha-M-Dhir/Data-Structures-Queues-and-linked-list"
+              target="_blank" rel="noreferrer">View Code</a>
           </div>
         </article>
 
         <article class="project-card">
           <h3>Data Structures</h3>
           <p>
-            Core data-structure implementations and notes for study and review, including
-            arrays, stacks, queues, trees, and graphs. Emphasizes clarity, tests, and
-            tradeoffs to help compare alternatives and choose the right tool quickly.
+            Comprehensive study guide built with Java and Markdown. It implements core structures like arrays, stacks,
+            trees, and graphs to prepare for interviews.
           </p>
           <div class="actions">
-            <a class="btn outline" href="https://github.com/Aniruddha-M-Dhir/Data-Structures-" target="_blank" rel="noreferrer">View Code</a>
+            <a class="btn outline" href="https://github.com/Aniruddha-M-Dhir/Data-Structures-" target="_blank"
+              rel="noreferrer">View Code</a>
           </div>
         </article>
 
         <article class="project-card">
           <h3>OOP: Classes & Inheritance</h3>
           <p>
-            Object-oriented programming exercises focusing on classes, inheritance, and
-            composition. Uses small challenges to illustrate encapsulation, polymorphism,
-            and design tradeoffs that keep code flexible, readable, and testable.
+            Java OOP exercises using small challenges to illustrate encapsulation, polymorphism, inheritance, and composition.
           </p>
           <div class="actions">
-            <a class="btn outline" href="https://github.com/Aniruddha-M-Dhir/OOP_Classes_Inheritence" target="_blank" rel="noreferrer">View Code</a>
+            <a class="btn outline" href="https://github.com/Aniruddha-M-Dhir/OOP_Classes_Inheritence" target="_blank"
+              rel="noreferrer">View Code</a>
           </div>
         </article>
 
         <article class="project-card">
           <h3>Arrays and OOP</h3>
           <p>
-            Combines array manipulation with object-oriented patterns and design. Covers
-            iteration, searching, and transformation while introducing small reusable
-            classes and methods that make code robust and easier to maintain.
+            Java algorithmic challenges covering array iteration, searching, and transformation using reusable object-oriented classes.
           </p>
           <div class="actions">
-            <a class="btn outline" href="https://github.com/Aniruddha-M-Dhir/Arrays-and-OOP" target="_blank" rel="noreferrer">View Code</a>
+            <a class="btn outline" href="https://github.com/Aniruddha-M-Dhir/Arrays-and-OOP" target="_blank"
+              rel="noreferrer">View Code</a>
           </div>
         </article>
 
         <article class="project-card">
           <h3>BMI Calculator</h3>
           <p>
-            Simple BMI calculator with input validation and category output. Demonstrates
-            UI flow, numeric handling, and edge cases while keeping the codebase clean,
-            approachable, and ready for feature extensions or styling tweaks.
+            Health calculator built with HTML, CSS, and JS. It demonstrates interface flow, numeric input handling, and
+            edge cases while keeping code clean.
           </p>
           <div class="actions">
-            <a class="btn outline" href="https://github.com/Aniruddha-M-Dhir/BMI-Calculator" target="_blank" rel="noreferrer">View Code</a>
+            <a class="btn outline" href="https://github.com/Aniruddha-M-Dhir/BMI-Calculator" target="_blank"
+              rel="noreferrer">View Code</a>
           </div>
         </article>
 
         <article class="project-card">
           <h3>Restaurant Check Manager</h3>
           <p>
-            Calculates restaurant bills, tips, taxes, and group splits. Focuss on clear
-            user inputs, currency formatting, and predictable rounding so totals are
-            transparent and sharing costs with friends stays quick and drama-free.
+            Utility app built with HTML, CSS, and JS. It calculates restaurant bills, tips, taxes, and group splits so
+            sharing costs stays drama-free.
           </p>
           <div class="actions">
-            <a class="btn outline" href="https://github.com/Aniruddha-M-Dhir/RestaurantCheckManager" target="_blank" rel="noreferrer">View Code</a>
+            <a class="btn outline" href="https://github.com/Aniruddha-M-Dhir/RestaurantCheckManager" target="_blank"
+              rel="noreferrer">View Code</a>
           </div>
         </article>
 
         <article class="project-card">
           <h3>Credit Card Validator</h3>
           <p>
-            Validates card numbers using the Luhn algorithm and formats inputs for UX.
-            Provides clear error states and helper text so users fix issues fast,
-            improving reliability in checkout flows and form-heavy applications.
+            Validation utility built with HTML, CSS, and JS. It validates credit card numbers using the Luhn algorithm
+            and provides clear error states.
           </p>
           <div class="actions">
-            <a class="btn outline" href="https://github.com/Aniruddha-M-Dhir/Credit-Card-Validator" target="_blank" rel="noreferrer">View Code</a>
+            <a class="btn outline" href="https://github.com/Aniruddha-M-Dhir/Credit-Card-Validator" target="_blank"
+              rel="noreferrer">View Code</a>
           </div>
         </article>
 
         <article class="project-card">
           <h3>Tic Tac Toe</h3>
           <p>
-            Classic Tic-Tac-Toe with two-player and basic AI. Demonstrates state handling,
-            win detection, and draw logic, while keeping the UI responsive and the code
-            modular so variants like larger boards are easy to prototype later.
+            Classic game built with HTML, CSS, and JS. It features a two-player mode, an AI opponent, win detection, and
+            responsive handling logic.
           </p>
           <div class="actions">
-            <a class="btn outline" href="https://github.com/Aniruddha-M-Dhir/TicTacToe" target="_blank" rel="noreferrer">View Code</a>
+            <a class="btn outline" href="https://github.com/Aniruddha-M-Dhir/TicTacToe" target="_blank"
+              rel="noreferrer">View Code</a>
           </div>
         </article>
 
@@ -280,25 +290,28 @@
     </div>
   </section>
 
-<footer class="footer">
-  <p>&copy; 2025 Aniruddha Madhusudan Dhir. All rights reserved.</p>
-  <div class="footer-sci">
-    <a href="https://www.linkedin.com/in/aniruddha-dhir" target="_blank" rel="noopener noreferrer"><i class='bx bxl-linkedin'></i></a>
-    <a href="https://github.com/Aniruddha-M-Dhir?tab=repositories" target="_blank" rel="noopener noreferrer"><i class='bx bxl-github'></i></a>
-  </div>
-</footer>
+  <footer class="footer">
+    <p>&copy; 2025 Aniruddha Madhusudan Dhir. All rights reserved.</p>
+    <div class="footer-sci">
+      <a href="https://www.linkedin.com/in/aniruddha-dhir" target="_blank" rel="noopener noreferrer"><i
+          class='bx bxl-linkedin'></i></a>
+      <a href="https://github.com/Aniruddha-M-Dhir?tab=repositories" target="_blank" rel="noopener noreferrer"><i
+          class='bx bxl-github'></i></a>
+    </div>
+  </footer>
 
-<script>
+  <script>
     const menuIcon = document.getElementById('menu-icon');
     const navbar = document.querySelector('.navbar');
 
     menuIcon.onclick = () => {
-        navbar.classList.toggle('active');
-        // Toggle the icon change for better UX
-        menuIcon.classList.toggle('bx-menu');
-        menuIcon.classList.toggle('bx-x');
+      navbar.classList.toggle('active');
+      // Toggle the icon change for better UX
+      menuIcon.classList.toggle('bx-menu');
+      menuIcon.classList.toggle('bx-x');
     };
-</script>
+  </script>
 
 </body>
+
 </html>
