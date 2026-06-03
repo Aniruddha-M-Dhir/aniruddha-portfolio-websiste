@@ -32,48 +32,37 @@
       <br>
 
 
-<!-- Formspree global success / error banners -->
-<div class="fs-banner fs-banner--success" data-fs-success></div>
-<div class="fs-banner fs-banner--error" data-fs-error></div>
+<form action="https://api.web3forms.com/submit" method="POST" id="contact-form">
+  <input type="hidden" name="access_key" value="3b6bd53c-315f-4d5c-8884-ce7bad619a59">
+  <!-- Optional: redirect to a specific success page, or just let Web3Forms show its default "Thank you" page -->
+  <!-- <input type="hidden" name="redirect" value="https://web3forms.com/success"> -->
 
-<form id="contact-form">
   <fieldset>
     <legend>Send a Message</legend>
 
     <div class="form-row">
       <div class="form-group">
         <label for="firstName">First Name</label>
-        <input type="text" id="firstName" name="firstName" required placeholder="First Name" data-fs-field />
-        <span class="fs-field-error" data-fs-error="firstName"></span>
+        <input type="text" id="firstName" name="firstName" required placeholder="First Name" />
       </div>
       <div class="form-group">
         <label for="lastName">Last Name</label>
-        <input type="text" id="lastName" name="lastName" required placeholder="Last Name" data-fs-field />
-        <span class="fs-field-error" data-fs-error="lastName"></span>
+        <input type="text" id="lastName" name="lastName" required placeholder="Last Name" />
       </div>
     </div>
 
     <label for="email">Email Address</label>
-    <input type="email" id="email" name="email" required placeholder="Email Address" data-fs-field />
-    <span class="fs-field-error" data-fs-error="email"></span>
+    <input type="email" id="email" name="email" required placeholder="Email Address" />
 
     <label for="phone">Phone Number <span class="optional">(optional)</span></label>
     <input type="tel" id="phone" name="phone" placeholder="e.g. +1 415 000 0000" />
 
     <label for="message">Message</label>
-    <textarea id="message" name="message" required placeholder="Write your message here..." data-fs-field></textarea>
-    <span class="fs-field-error" data-fs-error="message"></span>
+    <textarea id="message" name="message" required placeholder="Write your message here..."></textarea>
 
-    <button type="submit" data-fs-submit-btn>Send Message</button>
+    <button type="submit">Send Message</button>
   </fieldset>
 </form>
-
-<!-- Formspree Ajax SDK -->
-<script>
-  window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
-  formspree('initForm', { formElement: '#contact-form', formId: 'mkoawqly' });
-</script>
-<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 
 </div>
 
