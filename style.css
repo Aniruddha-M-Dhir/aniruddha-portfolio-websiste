@@ -420,6 +420,11 @@ form button:hover::before {
   margin: 15px 0;
 }
 
+.highlight {
+  color: #00abf0;
+  font-weight: 600;
+}
+
 .about-sci {
   margin-top: 25px;
 }
