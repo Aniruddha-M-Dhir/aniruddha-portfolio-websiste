@@ -448,6 +448,33 @@ form button:hover::before {
   color: #081b29;
 }
 
+/* Action button row */
+.project-card .actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.project-card .actions a {
+  margin-top: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Filled (primary) button variant — solid blue */
+.project-card a.btn.filled {
+  background: #00abf0;
+  color: #081b29;
+  font-weight: 600;
+}
+
+.project-card a.btn.filled:hover {
+  background: #008fc7;
+  border-color: #008fc7;
+}
+
 /* === Skills Page (Auto-scroll) === */
 .skills {
   min-height: 100vh;
@@ -688,3 +715,122 @@ form button:hover::before {
   }
 }
 */
+
+/* --- Footer --- */
+.footer {
+  background: #050f18;
+  color: #ededed;
+  text-align: center;
+  padding: 28px 5%;
+  border-top: 1px solid rgba(0, 171, 240, 0.15);
+}
+
+.footer p {
+  font-size: 14px;
+  opacity: 0.65;
+  margin-bottom: 12px;
+}
+
+.footer-sci {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer-sci a {
+  text-decoration: none;
+  color: #ededed;
+  font-size: 24px;
+  display: inline-block;
+  transition: color 0.25s, transform 0.25s;
+}
+
+.footer-sci a:hover {
+  color: #00abf0;
+  transform: translateY(-3px);
+}
+
+/* --- Formspree Ajax UI --- */
+
+/* Success / error banners — hidden until Formspree populates them */
+.fs-banner {
+  display: none;
+  align-items: center;
+  gap: 10px;
+  max-width: 720px;
+  margin: 0 auto 20px;
+  padding: 14px 20px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/* Formspree adds text content when active — use :not(:empty) to reveal */
+.fs-banner:not(:empty) {
+  display: flex;
+}
+
+.fs-banner i {
+  font-size: 22px;
+  flex-shrink: 0;
+}
+
+.fs-banner--success {
+  background: rgba(0, 200, 120, 0.12);
+  border: 1px solid rgba(0, 200, 120, 0.35);
+  color: #00c878;
+}
+
+.fs-banner--error {
+  background: rgba(240, 80, 80, 0.12);
+  border: 1px solid rgba(240, 80, 80, 0.35);
+  color: #f05050;
+}
+
+/* Side-by-side name row */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 520px) {
+  .form-row { grid-template-columns: 1fr; }
+}
+
+/* Inline field-level error text */
+.fs-field-error {
+  display: block;
+  font-size: 12px;
+  color: #f05050;
+  margin-top: 4px;
+  min-height: 16px;
+}
+
+/* Invalid field highlight (set by Formspree via aria-invalid) */
+.contact form input[aria-invalid="true"],
+.contact form textarea[aria-invalid="true"] {
+  border-color: #f05050;
+  box-shadow: 0 0 0 3px rgba(240, 80, 80, 0.15);
+}
+
+/* Optional label badge */
+.optional {
+  font-size: 12px;
+  font-weight: 400;
+  opacity: 0.55;
+  margin-left: 4px;
+}
+
+/* Disabled submit button while sending */
+.contact form button[disabled],
+.contact form button[data-fs-submit-btn][disabled] {
+  opacity: 0.55;
+  cursor: not-allowed;
+  pointer-events: none;
+}

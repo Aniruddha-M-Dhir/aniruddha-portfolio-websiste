@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact - Aniruddha</title>
+  <meta name="description" content="Get in touch with Aniruddha Madhusudan Dhir — open to new roles, collaborations, and conversations about AI and software engineering.">
+  <title>Contact - Aniruddha Madhusudan Dhir</title>
   <link rel="stylesheet" href="style.css">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
@@ -16,10 +17,10 @@
 
     <nav class="navbar">
       <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="portfolio.html">Portfolio</a>
-      <a href="contact.html" class="active">Contact</a>
+      <a href="About.html">About</a>
+      <a href="Services.html">Services</a>
+      <a href="Portfolio.html">Portfolio</a>
+      <a href="Contact.html" class="active">Contact</a>
     </nav>
   </header>
 
@@ -31,44 +32,69 @@
       <br>
 
 
-<form action="/payments/cc" method="POST">
+<!-- Formspree global success / error banners -->
+<div class="fs-banner fs-banner--success" data-fs-success>
+  <i class='bx bx-check-circle'></i>
+  <span>Message sent! I'll get back to you soon.</span>
+</div>
+<div class="fs-banner fs-banner--error" data-fs-error>
+  <i class='bx bx-error-circle'></i>
+  <span>Something went wrong. Please try again.</span>
+</div>
+
+<form id="contact-form">
   <fieldset>
-    <legend>Customer Information</legend>
- 
-    <label for="First Name">First Name:</label>
-    <input type="text" name="First Name" required placeholder="First Name"/>
+    <legend>Send a Message</legend>
 
-    <label for="Last Name">Last Name:</label>
-    <input type="text" name="Last Name" required placeholder="Last Name"/>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input type="text" id="firstName" name="firstName" required placeholder="First Name" data-fs-field />
+        <span class="fs-field-error" data-fs-error="firstName"></span>
+      </div>
+      <div class="form-group">
+        <label for="lastName">Last Name</label>
+        <input type="text" id="lastName" name="lastName" required placeholder="Last Name" data-fs-field />
+        <span class="fs-field-error" data-fs-error="lastName"></span>
+      </div>
+    </div>
 
-    <label for="Email Address">Email Address:</label>
-    <input type="text" name="Email Address" required placeholder="Email Address"/>
+    <label for="email">Email Address</label>
+    <input type="email" id="email" name="email" required placeholder="Email Address" data-fs-field />
+    <span class="fs-field-error" data-fs-error="email"></span>
 
-    <label for="Phone Number">Phone Number:</label>
-    <input type="text" name="Phone Number" required placeholder="Phone Number"/>
+    <label for="phone">Phone Number <span class="optional">(optional)</span></label>
+    <input type="tel" id="phone" name="phone" placeholder="e.g. +1 415 000 0000" />
 
-    <label for="Message">Message:</label>
-    <input type="text" name="Message" required placeholder="Message"/>
+    <label for="message">Message</label>
+    <textarea id="message" name="message" required placeholder="Write your message here..." data-fs-field></textarea>
+    <span class="fs-field-error" data-fs-error="message"></span>
 
-    <button type="submit">Submit</button>
+    <button type="submit" data-fs-submit-btn>Send Message</button>
   </fieldset>
 </form>
 
-<div class="about-sci">
-  <a href="https://www.linkedin.com/in/aniruddha-dhir" target="_blank" rel="noopener noreferrer">
-    <i class='bx bxl-linkedin'></i>
-  </a>
-  <a href="https://github.com/Aniruddha-M-Dhir?tab=repositories" target="_blank" rel="noopener noreferrer">
-    <i class='bx bxl-github'></i>
-  </a>
-  <a href="https://www.instagram.com/anni__dhir" target="_blank" rel="noopener noreferrer">
-    <i class='bx bxl-instagram'></i>
-  </a>
+<!-- Formspree Ajax SDK -->
+<script>
+  window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+  formspree('initForm', { formElement: '#contact-form', formId: 'mkoawqly' });
+</script>
+<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+
 </div>
 
+</div>
 
-                    
+</section>
 
+<footer class="footer">
+  <p>&copy; 2025 Aniruddha Madhusudan Dhir. All rights reserved.</p>
+  <div class="footer-sci">
+    <a href="https://www.linkedin.com/in/aniruddha-dhir" target="_blank" rel="noopener noreferrer"><i class='bx bxl-linkedin'></i></a>
+    <a href="https://github.com/Aniruddha-M-Dhir?tab=repositories" target="_blank" rel="noopener noreferrer"><i class='bx bxl-github'></i></a>
+    <a href="https://www.instagram.com/anni__dhir" target="_blank" rel="noopener noreferrer"><i class='bx bxl-instagram'></i></a>
+  </div>
+</footer>
 
 <script>
     const menuIcon = document.getElementById('menu-icon');
