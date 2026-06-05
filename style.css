@@ -709,11 +709,10 @@ form button:hover::before {
 
   /* HOME SECTION: Stack content and image */
   .home {
-    /* Adjust padding to make room for content stack */
-    padding: 110px 6% 360px;
-    /* Move image to bottom-center of the screen */
-    background-position: center 78%;
-    background-size: 95vw;
+    /* Adjust padding for content stack */
+    padding: 110px 6% 120px;
+    /* Remove the picture on mobile view */
+    background-image: none;
   }
 
   .home-content {
