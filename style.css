@@ -40,19 +40,16 @@ body {
   justify-content: space-between;
   align-items: center;
   /* Glassmorphism background so scrolling text doesn't collide */
-  background: rgba(0, 0, 0, 0.85);
+  background: rgba(8, 27, 41, 0.85);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(0, 171, 240, 0.15);
   z-index: 100;
 }
 
-/* Modifier class for the Home page to blend seamlessly with the background image */
-.header.header-transparent {
-  background: transparent;
-  backdrop-filter: none;
-  -webkit-backdrop-filter: none;
-  border-bottom: none;
+/* Modifier class for the Home page to have a black header */
+.header.header-black {
+  background: rgba(0, 0, 0, 0.85);
 }
 
 .logo {
@@ -731,8 +728,12 @@ form button:hover::before {
 
   /* HEADER & NAV: Show hamburger icon, hide desktop links */
   .header {
-    background: #000000;
+    background: #081b29;
     /* Give header a background on mobile */
+  }
+
+  .header.header-black {
+    background: #000000;
   }
 
   #menu-icon {
